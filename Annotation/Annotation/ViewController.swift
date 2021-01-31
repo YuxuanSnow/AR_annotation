@@ -39,6 +39,7 @@ class ViewController: UIViewController {
     // MARK: Setup Methods
     func setupARview(){
       
+        // set up AR view, can disable the DebugOptions
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = [.horizontal, .vertical] // both plane detection
         configuration.environmentTexturing = .automatic // make it more realistic
@@ -49,6 +50,7 @@ class ViewController: UIViewController {
     
     func addObject(x: Float = 0, y: Float = 0, z: Float = 0) {
 
+        // Add the object at the given 3D position
         guard let ObjectScene = SCNScene(named: "art.scnassets/bullfinch.scn"),
             let ObjectNode = ObjectScene.rootNode.childNode(withName: "Plane", recursively: false)
         else {
@@ -64,7 +66,7 @@ class ViewController: UIViewController {
     }
     
     func addAnno(x: Float = 0, y: Float = 0, z: Float = 0) {
-        
+        // Add annotation point at given position and given color, the label is "annotation"
         let node = SCNNode(geometry: SCNSphere(radius: 0.0005))
         node.name = "annotation"
         node.geometry?.firstMaterial?.diffuse.contents = color
@@ -73,6 +75,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func annoOrWipe(_ sender: UISegmentedControl) {
+        // Add annotation or wipe annotation
         if sender.selectedSegmentIndex == 0{
             anno_on = true
         }else if sender.selectedSegmentIndex == 1{
@@ -81,7 +84,7 @@ class ViewController: UIViewController {
     }
     @IBAction func annoOrNot(_ sender: UISegmentedControl) {
         // wrong name: actually it is color switch
-        
+        // Select color
         if sender.selectedSegmentIndex == 0{
             color = UIColor.red
         }else if sender.selectedSegmentIndex == 1{
@@ -100,6 +103,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clearContent(_ sender: Any) {
+        // Clear nodes with label "annotation"
         self.sceneView.scene.rootNode.enumerateChildNodes({ (node, _) in
             if node.name == "annotation" {
                 node.removeFromParentNode()
@@ -110,10 +114,12 @@ class ViewController: UIViewController {
 
     
     @objc func createNodesfromPan(_gesture: UIPanGestureRecognizer){
+        
+        // 2D position of screen, generate a ray
         let currentPosition = _gesture.location(in: self.sceneView)
         let hitTestResults = self.sceneView.hitTest(currentPosition, options: nil)
 
-        
+        // if the ray hit the model, then add annotation node.
         if hitTestResults .isEmpty{
             self.statusText.text = "No hit result"
             return

@@ -15,9 +15,7 @@
 		F51611D3259B84C1009368D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51611D1259B84C1009368D1 /* LaunchScreen.storyboard */; };
 		F51611DE259B84C1009368D1 /* AnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51611DD259B84C1009368D1 /* AnnotationTests.swift */; };
 		F51611E9259B84C1009368D1 /* AnnotationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51611E8259B84C1009368D1 /* AnnotationUITests.swift */; };
-		F5954A2D259CA0F400712180 /* iPhone 12 Box.dae in Resources */ = {isa = PBXBuildFile; fileRef = F5954A2C259CA0F400712180 /* iPhone 12 Box.dae */; };
 		F5954A3F259CA28200712180 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F5954A3E259CA28200712180 /* art.scnassets */; };
-		F5954A47259CA5DB00712180 /* bullfinch.dae in Resources */ = {isa = PBXBuildFile; fileRef = F5954A46259CA5DB00712180 /* bullfinch.dae */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +50,7 @@
 		F51611E4259B84C1009368D1 /* AnnotationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnnotationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51611E8259B84C1009368D1 /* AnnotationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationUITests.swift; sourceTree = "<group>"; };
 		F51611EA259B84C1009368D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F5954A2C259CA0F400712180 /* iPhone 12 Box.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = "iPhone 12 Box.dae"; path = "../../../Downloads/DAE/iPhone 12 Box.dae"; sourceTree = "<group>"; };
 		F5954A3E259CA28200712180 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		F5954A46259CA5DB00712180 /* bullfinch.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = bullfinch.dae; path = ../../../Downloads/bullfinch.dae; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +101,8 @@
 		F51611C5259B84BC009368D1 /* Annotation */ = {
 			isa = PBXGroup;
 			children = (
-				F5954A46259CA5DB00712180 /* bullfinch.dae */,
 				F51611C6259B84BC009368D1 /* AppDelegate.swift */,
 				F51611C8259B84BC009368D1 /* SceneDelegate.swift */,
-				F5954A2C259CA0F400712180 /* iPhone 12 Box.dae */,
 				F51611CA259B84BC009368D1 /* ViewController.swift */,
 				F51611CC259B84BC009368D1 /* Main.storyboard */,
 				F51611CF259B84C1009368D1 /* Assets.xcassets */,
@@ -240,11 +234,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5954A2D259CA0F400712180 /* iPhone 12 Box.dae in Resources */,
 				F5954A3F259CA28200712180 /* art.scnassets in Resources */,
 				F51611D3259B84C1009368D1 /* LaunchScreen.storyboard in Resources */,
 				F51611D0259B84C1009368D1 /* Assets.xcassets in Resources */,
-				F5954A47259CA5DB00712180 /* bullfinch.dae in Resources */,
 				F51611CE259B84BC009368D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
